@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ZenGenie</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>🧞‍♂️ZenGenie🧞‍♂️</h1>
+				<p>"Wishes!? Ha, I grant motivation! Care to dabble?"</p>
+			</header>
+
+			<div class="form-container">
+				<form id="zenForm">
+					<input list="categories" name="categories" />
+					<datalist id="categories">
+						<option value="Happiness"></option>
+						<option value="Anxiety"></option>
+						<option value="Failure"></option>
+						<option value="Confidence"></option>
+						<option value="Inspiration"></option>
+					</datalist>
+
+					<button type="submit">Poof</button>
+				</form>
+			</div>
+
+			<div id="results"></div>
+
+			<footer>
+				<p>
+					Inspirational quotes provided by
+					<a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
+				</p>
+			</footer>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
