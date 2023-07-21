@@ -1,7 +1,7 @@
 //Adds event listener to document so that all HTML is loaded before JavaScript is applied
 document.addEventListener('DOMContentLoaded', () => {
 	const gifResults = document.getElementById('gifResults');
-	const quoteResults = document.getElementById("quoteResults");
+	const quoteResults = document.getElementById('quoteResults');
 
 	const form = document.getElementById('zenForm');
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((res) => res.json())
 			.then((data) => {
 				//console.log(data.data);
-				gifResults.innerHTML = `<img src= ${data.data.images.original.url}>`;
+				gifResults.innerHTML = `<img class="img-fluid" src= ${data.data.images.original.url}>`;
 			});
 	}
 	//Function that takes keyWord and uses it to zenquote from API and add it to HTML
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((data) => {
 				console.log(data);
 				quoteResults.innerHTML = data[0].h;
-
 			});
 	}
 
