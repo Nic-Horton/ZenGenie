@@ -8,46 +8,67 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Aladin&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
-		<div class="container">
-			<header class="row">
-				<div class="col-12 text-center">
+		<div class="container text-center">
+			<header class="row mb-2 mt-4">
+				<div class="col-12">
 					<h1>🧞‍♂️ZenGenie🧞‍♂️</h1>
-					<p>"Wishes!? Ha, I grant motivation! Care to dabble?"</p>
+					<p class="fs-3">
+						"Wishes!? I'm not that kind of Genie. <br />
+						What I grant is wisdom when you need it most"
+					</p>
 				</div>
 			</header>
 
-			<div class="row">
-				<div class="text-center">
-					<form id="zenForm">
-						<select id="categories">
-							<option>Happiness</option>
-							<option>Anxiety</option>
-							<option>Failure</option>
-							<option>Confidence</option>
-							<option>Inspiration</option>
-						</select>
-
-						<button type="submit">Poof</button>
-					</form>
+			<div class="row fs-5">
+				<div class="col-12">
+					<a href="favorites/index.html">FAVORITES</a>
 				</div>
 			</div>
-			<div class="row text-center">
+
+			<form id="zenForm" class="row justify-content-center mb-5">
+				<div class="col-6 flex-container-end ms-md-3 ms-sm-4 ms-2 p-0">
+					<select id="categories" class="form-select select-width fs-5">
+						<option>Happiness</option>
+						<option>Anxiety</option>
+						<option>Failure</option>
+						<option>Confidence</option>
+						<option>Inspiration</option>
+					</select>
+				</div>
+				<div
+					class="col-sm-5 col-4 flex-container-start me-xxl-5 me-xl-4 me-lg-4 pe-0"
+				>
+					<button type="submit" class="btn btn-info fs-5">Poof</button>
+				</div>
+				<div></div>
+			</form>
+
+			<div class="row">
 				<div class="col-12">
-					<div id="quoteResults"></div>
+					<div id="quoteResults" class="fs-3"></div>
+					<div id="favButtons">
+						<div id="gifSaver"></div>
+						<div id="quoteSaver"></div>
+					</div>
 					<div id="gifResults"></div>
 				</div>
 			</div>
 
 			<footer class="row">
-				<div class="col-12 text-center">
+				<div class="col-12">
 					<p>
 						Inspirational quotes provided by
 						<a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
-					</p>
-					<p>
-						Gifs Powered by
+						<br />Gifs Powered by
 						<a href="https://giphy.com/" target="_blank"
 							><img
 								src="images/Poweredby_100px-White_VertLogo.png"

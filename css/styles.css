@@ -1,0 +1,16 @@
+body{
+  font-family: 'Aladin', cursive;
+  color: #EBE645;
+  background-color: #000957;
+}
+.select-width {
+  width: fit-content;
+}
+.flex-container-end{
+  display: flex;
+  justify-content: end;
+}
+.flex-container-start{
+  display: flex;
+  justify-content: start;
+}
