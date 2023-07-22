@@ -1,0 +1,11 @@
+.select-width {
+  width: fit-content;
+}
+.flex-container-end{
+  display: flex;
+  justify-content: end;
+}
+.flex-container-start{
+  display: flex;
+  justify-content: start;
+}
