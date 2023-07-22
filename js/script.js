@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
-				quoteResults.innerHTML = data[0].h;
+				quoteResults.innerHTML =
+					data[0].h +
+					`<button class="btn btn-info" onclick="addToFavs('${data[0].h}')">Save Quote</button>`;
 			});
 	}
 
@@ -39,3 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		gifGenerator(keyWord);
 	});
 });
+
+function addToFavs(quote) {
+	var favoriteListJSON = localStorage.getItem('favoriteList');
+	var favoriteList = JSON.parse(favoriteListJSON);
+	if (favoriteList == null) {
+		favoriteList = [];
+	}
+	favoriteList.push(quote);
+	favoriteListJSON = JSON.stringify(favoriteList);
+	localStorage.setItem('favoriteList', favoriteListJSON);
+}
