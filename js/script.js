@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((data) => {
 				//console.log(data.data);
 				gifResults.innerHTML = `<img class="img-fluid" src= ${data.data.images.original.url}>`;
-				gifSaver.innerHTML = `<button class="btn btn-info">Save Gif</button>`;
+				gifSaver.innerHTML = `<button class="btn btn-info" onclick="addGifToFavs('${data.data.images.original.url}')">Save Gif</button>`;
 			});
 	}
 	//Function that takes keyWord and uses it to zenquote from API and add it to HTML
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((data) => {
 				console.log(data);
 				quoteResults.innerHTML = data[0].h;
-				quoteSaver.innerHTML = `<button class="btn btn-info mb-3" onclick="addToFavs('${data[0].h}')">Save Quote</button>`;
+				quoteSaver.innerHTML = `<button class="btn btn-info mb-3" onclick="addQuoteToFavs('${data[0].h}')">Save Quote</button>`;
 			});
 	}
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
-function addToFavs(quote) {
+function addQuoteToFavs(quote) {
 	var favoriteListJSON = localStorage.getItem('favoriteList');
 	var favoriteList = JSON.parse(favoriteListJSON);
 	if (favoriteList == null) {
@@ -52,4 +52,15 @@ function addToFavs(quote) {
 	favoriteList.push(quote);
 	favoriteListJSON = JSON.stringify(favoriteList);
 	localStorage.setItem('favoriteList', favoriteListJSON);
+}
+
+function addGifToFavs(gif) {
+	var favoriteGifListJSON = localStorage.getItem('favoriteGifList');
+	var favoriteGifList = JSON.parse(favoriteGifListJSON);
+	if (favoriteGifList == null) {
+		favoriteGifList = [];
+	}
+	favoriteGifList.push(gif);
+	favoriteGifListJSON = JSON.stringify(favoriteGifList);
+	localStorage.setItem('favoriteGifList', favoriteGifListJSON);
 }

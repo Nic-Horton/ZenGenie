@@ -1,3 +1,8 @@
 body{
   font-family: 'Aladin', cursive;
 }
+
+.gif-card-specifics{
+  width: 18rem;
+  height: fit-content;
+}
