@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const keyWord = document.getElementById('categories').value;
 		quoteGenerator(keyWord);
 		gifGenerator(keyWord);
+		document.getElementById('results').style.display = 'flex';
 	});
 });
 

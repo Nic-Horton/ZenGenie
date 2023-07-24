@@ -14,3 +14,11 @@ body{
   display: flex;
   justify-content: start;
 }
+
+.content-color{
+  background-color: #023e8a;
+}
+
+.hides{
+  display: none;
+}

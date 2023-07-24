@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
-		<div class="container text-center">
+		<div class="container-fluid text-center">
 			<header class="row mb-2 mt-4">
 				<div class="col-12">
 					<h1>🧞‍♂️ZenGenie🧞‍♂️</h1>
@@ -30,14 +30,18 @@
 
 			<div class="row fs-5 mb-2">
 				<div class="col-12">
-					<a href="favorites/index.html" class="p-4">Favorite Quotes</a>
-					<a href="favorites/favGifs.html" class="p-4">Favorite Gifs</a>
+					<a href="favorites/index.html" class="p-4 text-nowrap"
+						>Favorite Quotes</a
+					>
+					<a href="favorites/favGifs.html" class="p-4 text-nowrap"
+						>Favorite Gifs</a
+					>
 				</div>
 			</div>
 
-			<form id="zenForm" class="row justify-content-center mb-5">
-				<div class="col-6 flex-container-end ms-md-3 ms-sm-4 ms-2 p-0">
-					<select id="categories" class="form-select select-width fs-5">
+			<form id="zenForm" class="row justify-content-center mb-3 g-2">
+				<div class="select-width">
+					<select id="categories" class="form-select fs-5 end-0">
 						<option>Happiness</option>
 						<option>Anxiety</option>
 						<option>Failure</option>
@@ -45,15 +49,13 @@
 						<option>Inspiration</option>
 					</select>
 				</div>
-				<div
-					class="col-sm-5 col-4 flex-container-start me-xxl-5 me-xl-4 me-lg-4 pe-0"
-				>
+				<div class="select-width">
 					<button type="submit" class="btn btn-info fs-5">Poof</button>
 				</div>
 				<div></div>
 			</form>
 
-			<div class="row">
+			<div id="results" class="row mb-2 mt-4 mt-sm-5 hides">
 				<div class="col-12">
 					<div id="quoteResults" class="fs-3"></div>
 					<div id="favButtons" class="row justify justify-content-center mb-3">
