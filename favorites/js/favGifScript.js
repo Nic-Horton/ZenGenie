@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const favs = document.getElementById('favorites');
-
 	function myGifs(gifs) {
 		let gifHTML = gifs.map((currentGif) => {
 			return `
@@ -12,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  	  </div>
 		  </div>`;
 		});
+		const favs = document.getElementById('favorites');
 		favs.innerHTML = gifHTML.join('');
 	}
 

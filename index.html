@@ -17,10 +17,53 @@
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
-		<div class="container text-center">
+		<video autoplay muted loop id="myBG">
+			<source src="images/plasma_-_1466 (360p).mp4" type="video/mp4" />
+		</video>
+
+		<nav class="navbar navbar-expand-sm bg-body-tertiary">
+			<div class="container-fluid">
+				<a class="navbar-brand fs-3" href="index.html">ZenGenie</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav fs-5">
+						<li class="nav-item">
+							<a class="nav-link" href="favorites/favGifs.html">Saved Gifs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="favorites/index.html">Saved Quotes</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid text-center overlay">
 			<header class="row mb-2 mt-4">
 				<div class="col-12">
-					<h1>🧞‍♂️ZenGenie🧞‍♂️</h1>
+					<div class="text-nowrap">
+						<h1>
+							<img
+								src="images/genie.png"
+								alt="genie icon"
+								class="genie-icon img-fluid"
+							/>ZenGenie<img
+								src="images/genie.png"
+								alt="genie icon"
+								class="genie-icon img-fluid"
+							/>
+						</h1>
+					</div>
 					<p class="fs-3">
 						"Wishes!? I'm not that kind of Genie. <br />
 						What I grant is wisdom when you need it most"
@@ -28,16 +71,20 @@
 				</div>
 			</header>
 
-			<div class="row fs-5 mb-2">
+			<!-- <div class="row fs-5 mb-2">
 				<div class="col-12">
-					<a href="favorites/index.html" class="p-4">Favorite Quotes</a>
-					<a href="favorites/favGifs.html" class="p-4">Favorite Gifs</a>
+					<a href="favorites/index.html" class="p-4 text-nowrap"
+						>Favorite Quotes</a
+					>
+					<a href="favorites/favGifs.html" class="p-4 text-nowrap"
+						>Favorite Gifs</a
+					>
 				</div>
-			</div>
+			</div> -->
 
-			<form id="zenForm" class="row justify-content-center mb-5">
-				<div class="col-6 flex-container-end ms-md-3 ms-sm-4 ms-2 p-0">
-					<select id="categories" class="form-select select-width fs-5">
+			<form id="zenForm" class="row justify-content-center mb-3 g-2">
+				<div class="select-width">
+					<select id="categories" class="form-select fs-5 end-0">
 						<option>Happiness</option>
 						<option>Anxiety</option>
 						<option>Failure</option>
@@ -45,15 +92,13 @@
 						<option>Inspiration</option>
 					</select>
 				</div>
-				<div
-					class="col-sm-5 col-4 flex-container-start me-xxl-5 me-xl-4 me-lg-4 pe-0"
-				>
+				<div class="select-width">
 					<button type="submit" class="btn btn-info fs-5">Poof</button>
 				</div>
 				<div></div>
 			</form>
 
-			<div class="row">
+			<div id="results" class="row mb-2 mt-4 mt-sm-5 hides">
 				<div class="col-12">
 					<div id="quoteResults" class="fs-3"></div>
 					<div id="favButtons" class="row justify justify-content-center mb-3">
@@ -79,6 +124,11 @@
 				</div>
 			</footer>
 		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+			crossorigin="anonymous"
+		></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

@@ -1,8 +1,5 @@
 //Adds event listener to document so that all HTML is loaded before JavaScript is applied
 document.addEventListener('DOMContentLoaded', () => {
-	const gifResults = document.getElementById('gifResults');
-	const quoteResults = document.getElementById('quoteResults');
-
 	const form = document.getElementById('zenForm');
 
 	//Function that takes keyWord and uses it to fetch gif from API and add it to HTML
@@ -15,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((res) => res.json())
 			.then((data) => {
 				//console.log(data.data);
+				const gifResults = document.getElementById('gifResults');
 				gifResults.innerHTML = `<img class="img-fluid" src= ${data.data.images.original.url}>`;
 				gifSaver.innerHTML = `<button class="btn btn-info" onclick="addGifToFavs('${data.data.images.original.url}')">Save Gif</button>`;
 			});
@@ -29,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
+				const quoteResults = document.getElementById('quoteResults');
 				quoteResults.innerHTML = data[0].h;
 				quoteSaver.innerHTML = `<button class="btn btn-info mb-3" onclick="addQuoteToFavs('${data[0].h}')">Save Quote</button>`;
 			});
@@ -40,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const keyWord = document.getElementById('categories').value;
 		quoteGenerator(keyWord);
 		gifGenerator(keyWord);
+		document.getElementById('results').style.display = 'flex';
 	});
 });
 
