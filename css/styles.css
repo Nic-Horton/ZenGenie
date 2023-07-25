@@ -1,16 +1,45 @@
 body{
   font-family: 'Aladin', cursive;
   color: #EBE645;
-  background-color: #000957;
+  /* background-color: #000957; */
 }
+
+#myBG {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(70%);
+}
+
+.overlay {
+  position: absolute;
+  z-index: 100;
+}
+
+.genie-icon{
+  max-width: 4.5rem;
+}
+
 .select-width {
   width: fit-content;
 }
+
 .flex-container-end{
   display: flex;
   justify-content: end;
 }
+
 .flex-container-start{
   display: flex;
   justify-content: start;
+}
+
+.content-color{
+  background-color: #023e8a;
+}
+
+.hides{
+  display: none;
 }
