@@ -17,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	var favoriteGifListJSON = localStorage.getItem('favoriteGifList');
 	var favoriteGifList = JSON.parse(favoriteGifListJSON);
 	myGifs(favoriteGifList);
+	new Masonry('#favorites');
 });
