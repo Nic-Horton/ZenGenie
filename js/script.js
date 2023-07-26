@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				console.log(data);
 				const quoteResults = document.getElementById('quoteResults');
 				quoteResults.innerHTML = data[0].h;
-				quoteSaver.innerHTML = `<button id="quoteSaverBtn" class="btn btn-info mb-3" onclick="addQuoteToFavs('${data[0].h}')">Save Quote</button>`;
+				quoteSaver.innerHTML = `<button id="quoteSaverBtn" class="btn btn-info text-nowrap mb-3" onclick="addQuoteToFavs('${data[0].h}')">Save Quote</button>`;
 			});
 	}
 
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+//Adds quotes to local storage and disables button their is not multiple clicks
 function addQuoteToFavs(quote) {
 	document.getElementById('quoteSaverBtn').disabled = true;
 
@@ -56,6 +57,7 @@ function addQuoteToFavs(quote) {
 	localStorage.setItem('favoriteList', favoriteListJSON);
 }
 
+//Adds gifs to local storage and disables button their is not multiple clicks
 function addGifToFavs(gif) {
 	document.getElementById('gifSaverBtn').disabled = true;
 

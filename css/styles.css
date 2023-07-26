@@ -3,14 +3,20 @@ body{
   color: #EBE645;
   /* background-color: #000957; */
 }
-
+.navbar-brand{
+  color: #023e8a;
+}
+.navbar-brand:hover{
+  color: #023e8a;
+  filter: brightness(80%);
+}
 #myBG {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    filter: brightness(70%);
+    filter: brightness(85%);
 }
 
 .overlay {
@@ -19,7 +25,7 @@ body{
 }
 
 .genie-icon{
-  max-width: 4.5rem;
+  max-width: 3.5rem;
 }
 
 .select-width {
@@ -42,4 +48,8 @@ body{
 
 .hides{
   display: none;
+}
+.credit{
+  text-decoration: none;
+  color: rgb(25, 24, 107);
 }
