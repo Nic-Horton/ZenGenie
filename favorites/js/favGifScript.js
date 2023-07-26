@@ -2,7 +2,7 @@ function myGifs(gifs) {
 	let gifHTML = gifs.map((currentGif) => {
 		return `
 			<div class="col-sm-6 col-lg-4 mb-4">
-				<div class="card ">
+				<div class="card">
           <div class="card-body">
 	      	  <img src="${currentGif}" class="card-img img-fluid">
           </div>

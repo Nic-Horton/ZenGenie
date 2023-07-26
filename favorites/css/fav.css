@@ -1,5 +1,10 @@
 body{
   font-family: 'Aladin', cursive;
+  background-color: #4361ee;
+  color: #ebe645;
+
 }
 
-
+#resultDiv{
+  background-color: #ebe645;
+}
