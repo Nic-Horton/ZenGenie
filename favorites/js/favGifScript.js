@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-	function myGifs(gifs) {
-		let gifHTML = gifs.map((currentGif) => {
-			return `
+function myGifs(gifs) {
+	let gifHTML = gifs.map((currentGif) => {
+		return `
 			<div class="col-sm-6 col-lg-4 mb-4">
 				<div class="card ">
           <div class="card-body">
@@ -9,13 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 	  	  </div>
 		  </div>`;
-		});
-		const favs = document.getElementById('favorites');
-		favs.innerHTML = gifHTML.join('');
-	}
+	});
+	const favs = document.getElementById('favorites');
+	favs.innerHTML = gifHTML.join('');
+}
 
+function displayFavGifs() {
 	var favoriteGifListJSON = localStorage.getItem('favoriteGifList');
 	var favoriteGifList = JSON.parse(favoriteGifListJSON);
 	myGifs(favoriteGifList);
-	new Masonry('#favorites');
-});
+}
+displayFavGifs();
