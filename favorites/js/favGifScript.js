@@ -27,4 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		var msnry = new Masonry('#favorites');
 		msnry.reloadItems();
 	}, 300);
+
+	setTimeout(function () {
+		var msnry = new Masonry('#favorites');
+		msnry.reloadItems();
+	}, 500);
 });
