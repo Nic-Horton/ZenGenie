@@ -4,7 +4,26 @@ body{
   color: #ebe645;
 
 }
-
+.navbar-brand{
+  color: #023e8a;
+}
+.navbar-brand:hover{
+  color: #023e8a;
+  filter: brightness(80%);
+}
 #resultDiv{
   background-color: #ebe645;
+}
+
+.genie-icon{
+  max-width: 3.5rem;
+}
+
+@media screen and (max-width: 205px) {
+  body {
+    min-width: 100%;
+  }
+  .genie-icon {
+    max-width: 2.5rem;
+  }
 }

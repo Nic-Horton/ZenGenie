@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="../favorites/css/fav.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-sm bg-body-tertiary">
+		<nav class="navbar navbar-expand-sm bg-body-tertiary shadow">
 			<div class="container-fluid">
 				<a class="navbar-brand fs-3" href="../index.html">ZenGenie</a>
 				<button
@@ -39,7 +39,10 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="../favorites/index.html"
+							<a
+								class="nav-link active"
+								aria-current="page"
+								href="../favorites/index.html"
 								>Saved Quotes</a
 							>
 						</li>
@@ -51,7 +54,19 @@
 		<div class="container text-center">
 			<header class="row mb-1 mt-4 mb-4">
 				<div class="col-12">
-					<h1>🧞‍♂️ZenGenie🧞‍♂️</h1>
+					<div class="text-nowrap">
+						<h1>
+							<img
+								src="../images/genie.png"
+								alt="genie icon"
+								class="genie-icon img-fluid"
+							/>ZenGenie<img
+								src="../images/genie.png"
+								alt="genie icon"
+								class="genie-icon img-fluid"
+							/>
+						</h1>
+					</div>
 					<p class="fs-3">
 						"Your favorite quotes have been stored here, <br />
 						have fun browsing"
