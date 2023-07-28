@@ -17,19 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	var favoriteGifList = JSON.parse(favoriteGifListJSON);
 	myGifs(favoriteGifList);
 
-	//set a time for this to run in order to fix initial loading bug. Allows gifs to load first before attempting reload.
-	setTimeout(function () {
-		var msnry = new Masonry('#favorites');
-		msnry.reloadItems();
-	}, 100);
-
-	setTimeout(function () {
-		var msnry = new Masonry('#favorites');
-		msnry.reloadItems();
-	}, 300);
-
-	setTimeout(function () {
-		var msnry = new Masonry('#favorites');
-		msnry.reloadItems();
-	}, 500);
+	//Allows gifs to load first before attempting reload.
+	imagesLoaded(favs, function () {
+		// init Isotope after all images have loaded
+		new Masonry(favs, {
+			percentPosition: true,
+		});
+	});
 });

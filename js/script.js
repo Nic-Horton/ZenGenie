@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		)
 			.then((res) => res.json())
 			.then((data) => {
-				//console.log(data.data);
 				const gifResults = document.getElementById('gifResults');
 				gifResults.innerHTML = `<img class="img-fluid" src= ${data.data.images.original.url}>`;
 				gifSaver.innerHTML = `<button id="gifSaverBtn" class="btn btn-info" onclick="addGifToFavs('${data.data.images.original.url}')">Save Gif</button>`;
